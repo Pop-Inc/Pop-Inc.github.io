@@ -1,19 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopWebsite</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PopScript</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Hello! Links to download PopScript:</h2>
-    <a href="https://github.com/SphereCraft-Communty/popscript-1.0.1/releases/download/popscript/setupop.exe">Windows v1.0.1</a>
-    <p> </p>
-    <p> </p>
-    <h3>if you want to add your lib in popscript:</h3>
-    <h3>send to us your file with text what this</h3>
-    <h3>pop.inc.real@gmail.com</h3>
-    <p>more soon! <strong>(no)</strong></p>
+
+<nav>
+  <div class="nav-logo"><span>Pop</span>Script</div>
+  <div class="nav-links">
+    <a href="#">Downloads</a>
+    <a href="#">Docs</a>
+    <a href="#">Libraries</a>
+    <a href="https://github.com/SphereCraft-Communty/popscript-1.0.1">GitHub</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-version">v1.0.1</div>
+    <h1><span>Pop</span>Script</h1>
+    <p>A statically typed, compiled language designed for readability,<br>explicit syntax, and deterministic parsing.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="https://github.com/SphereCraft-Communty/popscript-1.0.1/releases/download/popscript/setupop.exe">⬇ Download for Windows</a>
+      <a class="btn btn-secondary" href="https://github.com/SphereCraft-Communty/popscript-1.0.1">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-title">Quick example</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dot dot-red"></div>
+        <div class="code-dot dot-yellow"></div>
+        <div class="code-dot dot-green"></div>
+        <span class="code-filename">hello.pscript</span>
+      </div>
+      <div class="code-body">
+        <span class="cm">$/ PopScript 1.0.1 — bank example</span><br>
+        <span class="kw">lib import</span> random<br>
+        <span class="kw">lib import</span> random.number<br>
+        <br>
+        <span class="kw">list</span> names = [<span class="str">"Alice"</span>, <span class="str">"Bob"</span>, <span class="str">"Charlie"</span>]<br>
+        <span class="kw">int</span> balance = <span class="num">1000</span><br>
+        <br>
+        <span class="kw">for</span> name <span class="kw">with</span> names;<br>
+        &nbsp;&nbsp;<span class="kw">int</span> bonus = <span class="fn">number</span>(from=<span class="num">10</span>, to=<span class="num">100</span>)<br>
+        &nbsp;&nbsp;<span class="kw">int</span> balance = balance <span class="op">+</span> bonus<br>
+        &nbsp;&nbsp;<span class="fn">print</span>(name <span class="str">"got"</span> bonus)<br>
+        <span class="kw">stop</span>;<br>
+        <br>
+        <span class="fn">print</span>(<span class="str">"Final balance:"</span> balance)
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Why PopScript</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Statically typed</h3>
+        <p>Types are declared explicitly and resolved at compile time. No surprises at runtime.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3>Readable aloud</h3>
+        <p>Every line reads like a sentence. <code>for fruit with fruits;</code> — no cryptic symbols.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧩</div>
+        <h3>Library system</h3>
+        <p>Install packages with <code>pop get name</code> from the Pop-Inc repository. Write your own <code>.plib</code> files.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>Memory control</h3>
+        <p>Set <code>armemory=true</code> at the top of your file to manage memory manually with <code>alloc</code> and <code>free</code>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Downloads</div>
+    <table class="download-table">
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>OS</th>
+          <th>Status</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.0.1</strong></td>
+          <td><span class="badge badge-os">Windows</span></td>
+          <td><span class="badge badge-stable">Stable</span></td>
+          <td><a href="https://github.com/SphereCraft-Communty/popscript-1.0.1/releases/download/popscript/setupop.exe">setupop.exe</a></td>
+        </tr>
+        <tr>
+          <td colspan="4" style="color:var(--muted); font-size:0.85rem;">Linux and macOS — coming soon</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Submit a library</div>
+    <div class="contact-box">
+      <h3>Want to add your library to PopScript?</h3>
+      <p>Send us your <code>.plib</code> file along with a short description of what it does.</p>
+      <a href="mailto:pop.inc.real@gmail.com">pop.inc.real@gmail.com</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>PopScript</span> — built with Go &nbsp;·&nbsp; more soon <strong>(no)</strong>
+</footer>
+
 </body>
 </html>
