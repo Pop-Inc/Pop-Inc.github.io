@@ -236,6 +236,9 @@ nav {
   font-weight: 600;
 }
 .badge-stable { background: #e8f5e9; color: #2e7d32; }
+.badge-beta { background: #fff8e1; color: #f57f17; }
+.badge-dev { background: #fce4ec; color: #c62828; }
+.badge-deprecated { background: #eeeeee; color: #757575; }
 .badge-os { background: #e3f2fd; color: #1565c0; }
 
 .contact-box {
