@@ -44,7 +44,7 @@ nav {
 }
 
 .nav-logo span { color: var(--yellow); }
-
+html { scroll-behavior: smooth; }
 .nav-links { display: flex; gap: 1.5rem; }
 .nav-links a {
   color: rgba(255,255,255,0.85);
